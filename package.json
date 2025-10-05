@@ -1,0 +1,9 @@
+{
+  "name": "agenda-rust",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "chmod +x build.sh && ./build.sh"
+  },
+  "devDependencies": {}
+}

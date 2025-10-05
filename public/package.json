@@ -1,0 +1,15 @@
+{
+  "name": "agenda-rust",
+  "type": "module",
+  "version": "0.1.0",
+  "files": [
+    "agenda_rust_bg.wasm",
+    "agenda_rust.js",
+    "agenda_rust.d.ts"
+  ],
+  "main": "agenda_rust.js",
+  "types": "agenda_rust.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ]
+}
