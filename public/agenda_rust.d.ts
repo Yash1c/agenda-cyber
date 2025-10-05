@@ -1,11 +1,32 @@
 /* tslint:disable */
 /* eslint-disable */
+export class AgendaProcessor {
+  free(): void;
+  [Symbol.dispose](): void;
+  constructor();
+  carregar_eventos(eventos_js: any): void;
+  filtrar_eventos(grupo?: string | null, query?: string | null): any;
+  detectar_conflitos(): any;
+  gerar_ics(data_inicio: string): string;
+}
 
 export type InitInput = RequestInfo | URL | Response | BufferSource | WebAssembly.Module;
 
 export interface InitOutput {
   readonly memory: WebAssembly.Memory;
-  readonly __wbindgen_export_0: WebAssembly.Table;
+  readonly __wbg_agendaprocessor_free: (a: number, b: number) => void;
+  readonly agendaprocessor_new: () => number;
+  readonly agendaprocessor_carregar_eventos: (a: number, b: any) => [number, number];
+  readonly agendaprocessor_filtrar_eventos: (a: number, b: number, c: number, d: number, e: number) => any;
+  readonly agendaprocessor_detectar_conflitos: (a: number) => any;
+  readonly agendaprocessor_gerar_ics: (a: number, b: number, c: number) => [number, number];
+  readonly __wbindgen_malloc: (a: number, b: number) => number;
+  readonly __wbindgen_realloc: (a: number, b: number, c: number, d: number) => number;
+  readonly __wbindgen_exn_store: (a: number) => void;
+  readonly __externref_table_alloc: () => number;
+  readonly __wbindgen_export_4: WebAssembly.Table;
+  readonly __externref_table_dealloc: (a: number) => void;
+  readonly __wbindgen_free: (a: number, b: number, c: number) => void;
   readonly __wbindgen_start: () => void;
 }
 

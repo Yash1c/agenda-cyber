@@ -1,16 +1,43 @@
+<!-- ...existing content... -->
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-    <title>Agenda da Turma - Rust</title>
+    <!-- ...existing content... -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Agenda da Turma 2024 🔐🦀</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600&family=Space+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <script type="importmap">
+    {
+      "imports": {
+        "dayjs": "https://esm.sh/dayjs@1.11.13",
+        "dayjs/plugin/isoWeek": "https://esm.sh/dayjs@1.11.13/plugin/isoWeek",
+        "dayjs/plugin/utc": "https://esm.sh/dayjs@1.11.13/plugin/utc"
+      }
+    }
+    </script>
 </head>
 <body>
-    <h1>Agenda da Turma 2024 🦀</h1>
-    <div id="app"></div>
-    
-    <script type="module">
-        import init from './pkg/agenda_rust.js';
-        await init();
-        // Seu código Rust/WASM aqui
-    </script>
+    <!-- ...existing content... -->
+    <header class="topbar">
+        <h1 class="title">Agenda da Turma 🔐🦀</h1>
+        <div class="controls">
+            <input id="search" type="search" placeholder="Buscar por matéria/professor">
+            <select id="groupFilter">
+                <option value="">Todos os grupos</option>
+                <option value="A">Grupo A</option>
+                <option value="B">Grupo B</option>
+                <option value="C">Grupo C</option>
+            </select>
+            <input id="weekStart" type="date" aria-label="Início da semana">
+            <button id="exportIcs">Exportar .ics</button>
+        </div>
+    </header>
+    <main id="app" aria-live="polite"></main>
+    <!-- remove inline WASM init; moved to main.js -->
+    <script type="module" src="./main.js"></script>
 </body>
 </html>
+<!-- ...existing content... -->
